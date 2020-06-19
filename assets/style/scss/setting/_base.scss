@@ -1,0 +1,74 @@
+html,
+body {
+    -webkit-text-size-adjust: none;
+    //手機反轉時文字不縮放
+    -webkit-tap-highlight-color: transparent;
+    //點擊亮光效果
+}
+
+input {
+    -webkit-appearance: none;
+    background-color: transparent;
+    border: 1px solid #000;
+    //ios input亮光效果
+}
+//不懂
+
+ul {
+    margin-bottom: 0;
+}
+
+li,
+ol {
+    list-style: none;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+    display: block; /*清除 img 下面留白  */
+    //vertical-align: middle;
+    //去除圖片縫隙
+    
+}
+
+img,
+a {
+    -webkit-touch-callout: none; //不懂
+    text-decoration: none;
+    color: #000; //!important;
+    text-decoration: none !important;
+    //長按不彈出菜單 不懂
+}
+
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+#app {
+    height: 100vh;
+}
+p {
+    margin: 0;
+}
+main {
+    padding: 0 32px 32px 32px;
+}
+
+input,
+select,
+textarea {
+    outline: none;
+    border: none;
+    resize:none;
+}
+
+
+
+ 
+
+

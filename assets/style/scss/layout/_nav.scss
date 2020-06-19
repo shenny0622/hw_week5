@@ -1,0 +1,44 @@
+nav {
+    font-weight: bold;
+    line-height: 93px;
+    span:first-child {
+        margin-right: 48px;
+        font-size: 24px;
+    }
+    
+// 不太懂為何要下這個
+    /* span + span.material-icons.more {
+         color: $primary-dark;
+         margin-left: 8px;
+     }*/
+    span.material-icons.more {
+        color: $primary-dark;
+        cursor: pointer;
+        margin-left: 8px;
+    }
+    span.material-icons:first-child {
+        margin-right: 26px;
+    }
+    span.material-icons {
+        vertical-align: middle;
+        cursor: pointer;
+    }
+}
+nav[data-id="index"] {
+    margin-bottom: 12px;
+}
+
+/*
+nav[data-id="admin"] {
+    span.material-icons.add {
+        color: $primary-dark;
+        margin-right: 8px;
+    }
+}
+nav[data-id="assignment"] {
+}
+nav[data-id="assignment"] {
+}
+nav[data-id="assignment"] {
+}
+*/

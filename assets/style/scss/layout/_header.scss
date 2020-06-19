@@ -1,0 +1,104 @@
+header {
+    padding: 32px 0 32px 32px;
+    min-width: 296px;
+    background-color: $primary;
+    font-weight: bold;
+    h1 {
+        max-width: 151px;
+        margin-bottom: 42px;
+    }
+    li {
+        cursor: pointer;
+        margin-bottom: 29px;
+        span {
+            margin-right: 16px;
+            vertical-align: bottom;
+        }
+        &:hover {
+            color: $primary-dark;
+        }
+    }
+    li:last-child {
+        margin-bottom: 0;
+    }
+    .user {
+        img {
+            width: 40px;
+            height: 40px;
+            border-radius: 100%;
+            margin-right: 16px;
+        }
+        p {
+            line-height: 24px;
+        }
+        p:first-child {
+            font-size: 16px;
+            margin-bottom: 4px;
+        }
+        p:last-child {
+            color: $gray;
+            font-size: 14px;
+            font-weight: normal;
+        }
+    }
+    /*
+    ul.index li.assignment{
+         color:#121212; //icon顏色
+        a {
+            color:#121212; //a連結顏色
+        }
+    }
+    ul.index li.assignment:active{
+        color: $primary-dark;
+    }
+
+    ul.index li.assignment a:active{
+        color: $primary-dark;
+    }
+
+    ul.index li.admin {
+        color:#121212; //icon顏色
+        a {
+            color:#121212; //a連結顏色
+        }
+    }
+
+    ul.index li.admin:hover{
+        color: $primary-dark;
+    }
+
+    ul.index li.admin a:hover{
+        color: $primary-dark;
+    }
+   */
+
+    // start --搞不清楚切換li顏色設定的問題
+    //ask 我在base 已經有寫a連結是黑色，可是為什麼還是吃到預設顏色？
+
+    ul li a{
+        color:#121212; //a連結顏色
+        
+    }
+
+    ul li a:hover{
+        color: $primary-dark;
+        
+    }
+
+    ul.index li.assignment {
+        color: $primary-dark;
+        a {
+            color: $primary-dark;
+        }
+    }
+    /*
+    ul.admin li.admin {
+        color: $primary-dark;
+        a {
+            color: $primary-dark;
+        }
+    }
+    */
+   
+    
+}

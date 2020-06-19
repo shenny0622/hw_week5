@@ -1,0 +1,246 @@
+.material-icons {
+    cursor: pointer;
+}
+.content {
+    @include pad {
+        overflow-y: scroll;
+        height: calc(100vh - 110px);
+        //有點不太懂此語法
+    }
+}
+.allComments {
+    width: 35%;
+    @include pad {
+        width: 100%;
+    }
+    //大於(>)就是選取底下直接的子元素。
+    > p:first-child {
+        font-size: 16px;
+        line-height: 24px;
+        font-weight: bold;
+        margin-bottom: 6px;
+        span {
+            margin-left: 8px;
+            color: $primary-dark;
+        }
+    }
+    li {
+        border: 1px solid $primary;
+        font-size: 12px;
+        line-height: 24px;
+        padding: 12px;
+        font-weight: 500;
+        .title {
+            font-size: 16px;
+            font-weight: bold;
+        }
+        .name {
+            color: #0000009a;
+            font-weight: normal;
+        }
+        p:first-child {
+            margin-bottom: 4px;
+        }
+    }
+    li:first-child {
+        background-color: $primary;
+    }
+}
+
+.comment {
+    width: 63.5%;
+    @include pad {
+        width: 100%;
+    }
+    > p:first-child {
+        margin-bottom: 4px;
+        font-size: 12px;
+        line-height: 24px;
+        color: #707070;
+    }
+    .comments {
+        border: 1px solid $primary;
+        padding-bottom: 22px;
+        margin-bottom: 22px;
+        img {
+            max-width: 40px;
+        }
+        // 原來可以這樣的寫法
+        li:not(.title) {
+            padding: 16px 32px 0 16px;
+        }
+        .title {
+            padding: 12px 27px 12px 16px;
+            line-height: 24px;
+            font-size: 16px;
+            font-weight: bold;
+            background-color: $primary;
+            p:first-child {
+                font-size: 12px;
+                font-weight: 500;
+            }
+        }
+        .userName {
+            margin-bottom: 16px;
+            line-height: 24px;
+            img {
+                width: 40px;
+                height: 40px;
+                border-radius: 50%;
+                object-fit: cover; /*要注意此語法瀏覽器支援的問題 */
+                margin-right: 8px;
+            }
+            .user {
+                span:first-child {
+                    font-size: 16px;
+                    font-weight: bold;
+                }
+                span:last-child {
+                    font-size: 12px;
+                    color: #0000009a;
+                }
+            }
+            .userEdit {
+                margin-left: auto; /*重要 */
+                span:first-child {
+                    margin-right: 24px;
+                }
+                /*好像可以不用下？ */
+                // span:last-child {
+                //     font-weight: 24px;
+                // }
+            }
+        }
+        .userContent {
+            padding-left: 48px;
+            div {
+                font-size: 14px;
+                line-height: 21px;
+                margin-bottom: 16px;
+                span {
+                    display: inline-block;
+                    background-color: $primary;
+                    color: $primary-dark;
+                    padding: 0 4px;
+                    text-align: center;
+                    font-weight: 500;
+                }
+                p {
+                    padding-left: 17px;
+                }
+            }
+            .userYourself {
+                margin-bottom: 0px;
+            }
+            //zip檔那段
+            button {
+                background-color: $primary;
+                border: 1px solid #cdddcd;
+                line-height: 40px;
+                font-size: 16px;
+                padding-left: 12px;
+                padding-right: 16px;
+                font-weight: bold;
+                margin-right: 8px;
+                a {
+                    color: #000;
+                }
+                span {
+                    vertical-align: sub;
+                }
+            }
+            hr {
+                border: 1px solid $primary;
+            }
+        }
+    }
+    
+    // 留意scss寫法的階層問題
+    .commentFooter {
+        margin-bottom: 20px;
+        .arrowChange {
+            span:first-child {
+                margin-right: 23px;
+            }
+        }
+        .buttonHandler {
+            button {
+                font-size: 16px;
+                padding: 8px 32px;
+                background-color: $primary-dark;
+                color: #fff;
+                font-weight: 500;
+                border: 1px solid $primary-dark;
+                border-radius: 5px;
+                &:hover {
+                    background-color: #fff;
+                    color: $primary-dark;
+                }
+            }
+            button:first-child {
+                margin-right: 16px;
+            }
+        }
+        // 有點不太懂 使用相對定位去寫
+        .bodyText {
+            width: 0%;
+            height: 0;
+            right: 0;
+            bottom: 0;
+            background-color: #fff;
+            border: 1px solid $primary;
+            transition: 1s;
+            overflow: hidden;
+            textarea {
+                width: 100%;
+                height: 212px;
+                padding-left: 25px;
+                padding-top: 16px;
+            }
+        }
+        .bodyTextHeader {
+            font-weight: 24px;
+            padding: 16px 0;
+            padding-left: 25px;
+            background-color: $primary;
+            select {
+                font-size: 16px;
+                font-weight: bold;
+                margin-right: 24px;
+                background-color: $primary;
+                cursor: pointer;
+            }
+            li {
+                i {
+                    vertical-align: -webkit-baseline-middle;
+                    // icon對齊
+                }
+            }
+            // 為什麼第一個li不會ml? 不太懂？
+            //加號符號(+)則是會影響到後方同層級的第一個元素
+            li + li {
+                margin-left: 30px;
+            }
+        }
+        .btnHandler {
+            text-align: right;
+            padding-right: 24px;
+            padding-bottom: 16px;//好像沒作用？
+            button {
+                //mb下了沒用 好像是因為有下相對/絕對定位的關係
+                // margin-bottom: 20px;
+                font-size: 16px;
+                padding: 8px 32px;
+                background-color: $primary-dark;
+                color: #fff;
+                font-weight: 500;
+                border: 1px solid $primary-dark;
+                border-radius: 5px;
+                &:hover {
+                    background-color: #fff;
+                    color: $primary-dark;
+                }
+            }
+        }
+    }
+}

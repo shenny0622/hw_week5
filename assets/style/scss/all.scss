@@ -1,0 +1,9 @@
+@import "./setting/_base.scss";
+@import "./setting/_grid.scss";
+@import "./setting/_variable.scss";
+@import "./setting/_utils.scss"; //尚未寫內容
+@import "./layout/_header.scss";
+@import "./layout/_nav.scss";
+@import "./pages/_index.scss";
+
+// ask! 這樣的方式好像就變成是自己寫scss，並不是去改bs4的變數顏色？
